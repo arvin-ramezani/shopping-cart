@@ -1,3 +1,22 @@
+.bookList__title {
+    font-size: 1.5rem;
+    align-self: flex-start;
+    padding-right: 3rem;
+    /* cursor: pointer; */
+    /* transition: all .3s; */
+}
+/* 
+.bookList__title:hover {
+    transform: scale(1.2);
+} */
+
+.bookList__title > a {
+    color: rgb(37, 37, 240);
+    text-decoration: underline;
+    text-underline-offset: .1rem;
+    font-size: 1rem;
+    
+}
 
 ul.bookList {
     display: flex;

@@ -187,7 +187,8 @@ button.cart__delete--button > i:hover {
 }
 
 span.cart__each-price {
-    text-decoration: underline;
+    text-decoration: underline .09rem;
+    text-underline-offset: .1rem;
 }
 
 @media screen and (min-width: 768px) {

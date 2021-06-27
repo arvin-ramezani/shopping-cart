@@ -51,23 +51,24 @@ span.header__cart--text {
 
 .header__cart > span#cart-count {
     font-size: .7rem;
+    border: 1px solid;
     position: absolute;
     right: -1rem;
-    top: -8px;
-    background: red;
-    color: #fff;
-    border-radius: 50%;
+    top: -10px;
     padding: .3rem;
-    /* padding-bottom: .2rem; */
-    /* width: 1rem; */
-    /* height: 1rem; */
-    text-align: center;
+    border-radius: .3rem;
+    background: #cfdbfa;
 
 }
 
 nav.header__navigation {
     margin-top: 2rem;
 
+}
+
+.header__navigation .disabled-link {
+    pointer-events: none;
+    opacity: .5;
 }
 
 .header__navigation > ul {
@@ -83,14 +84,17 @@ div.header .header__navigation ul > li > a {
     color: #a2848f;
     white-space: nowrap;
     display: inline-flex;
-    padding: 0 .5rem .6rem;
+    margin: 0 .5rem .6rem;
+    transition: all .3s;
 }
 
-div.header .header__navigation ul > li > a.active {
+div.header .header__navigation ul > li > a.active, 
+div.header .header__navigation ul > li > a:hover {
     color: black;
 }
 
-div.header .header__navigation ul > li > a.active::before {
+div.header .header__navigation ul > li > a.active::before, 
+div.header .header__navigation ul > li > a:hover:before {
     content: "";
     position: absolute;
     height: 2px;

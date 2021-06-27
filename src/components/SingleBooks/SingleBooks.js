@@ -93,7 +93,7 @@ function SingleBooks(props) {
                     <ul>
                         <li>ناشر: <span>لورم ایپسوم</span></li>
                         <li>مترجم: <span>لورم ایپسوم</span></li>
-                        <li>قیمت ارزی: <span>$</span></li>
+                        <li>قیمت ارزی: <span>{storeBookList.price} $</span></li>
                         <li>نویسنده: <span>{storeBookList.writer}</span></li>
                         <li>تاریخ انتشار: <span>{storeBookList.publishDate}</span></li>
                         <li>تعداد صفحات: <span>{storeBookList.pageCount}</span></li>

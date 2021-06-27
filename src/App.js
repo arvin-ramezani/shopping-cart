@@ -20,6 +20,7 @@ import SingleBooks from './components/SingleBooks/SingleBooks';
 
 // import react-router-dom
 import { Route, Switch } from 'react-router';
+import AllBooks from './components/AllBooks/AllBooks';
 
 
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/" exact component={Main} />
           <Route path="/shoppingCart" component={ShoppingCart} />
           <Route path="/books/:id" component={SingleBooks} />
+          <Route path="/books" component={AllBooks} />
       </Switch>
       <FooterNav />
   </div>

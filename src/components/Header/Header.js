@@ -52,21 +52,19 @@ function Header(props) {
                 <nav className="header__navigation">
                     <ul>
                         <li>
-                            {/* <a href="/" className="active">همه</a> */}
                             <NavLink to="/" exact activeClassName="active">خانه</NavLink>
                         </li>
                         <li>
-                            {/* <a href="/">کتاب</a> */}
-                            <NavLink to="/books">کتاب</NavLink>
+                            <NavLink to="/books">همه ی کتاب ها</NavLink>
                         </li>
                         <li>
-                            <a href="/">کتاب صوتی</a>
+                            <a href="/" className="disabled-link">کتاب صوتی</a>
                         </li>
                         <li>
-                            <a href="/">پادکست</a>
+                            <a href="/" className="disabled-link">پادکست</a>
                         </li>
                         <li>
-                            <a href="/">مجله</a>
+                            <a href="/" className="disabled-link">مجله</a>
                         </li>
                     </ul>
                 </nav>

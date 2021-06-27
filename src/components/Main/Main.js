@@ -33,9 +33,9 @@ function Main() {
 
     let responseHandler = (data) => {
 
-        console.log(data)
+        // const initializeBookList = data.slice(0, 10).map(book => {
         
-        const initializeBookList = data.slice(0, 10).map(book => {
+        const initializeBookList = data.slice(0, 50).map(book => {
           return {
               ...book,
               writer: `writer ${writerCounter++}`,

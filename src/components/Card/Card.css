@@ -1,4 +1,4 @@
-div.card__body {
+.card__body {
     width: 100px;
     display: flex;
     flex-direction: column;
@@ -8,11 +8,18 @@ div.card__body {
     border-radius: .3rem;
     font-size: .8rem;
     gap: .7rem;
-    background: #ffffff;
+    background: rgb(255, 255, 255);
     cursor: pointer;
     direction: ltr;
     text-align: start;
     box-shadow: 3px -3px 4px #d6a6a6;
+    transition: all .3s;
+    cursor: pointer;
+    
+}
+
+.card__body:hover {
+    background: rgba(0, 0, 0, .1);
 }
 
 div.card__body.active {
