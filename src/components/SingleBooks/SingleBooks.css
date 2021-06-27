@@ -14,14 +14,23 @@
     align-items: center;
 }
 
-.single__cover > h2 {
+.single__name-block {
+    align-self: flex-start;
+}
+
+.single__name-block > h2 {
     margin-top: 1rem;
     font-size: 1.35rem;
 }
 
-.single__cover > p.single__writer {
+.single__name-block > p.single__writer {
     color: #7b759c;
     font-weight: 600;
+}
+
+.single__cover--img > img {
+    border: 1px solid;
+    border-radius: .3rem;
 }
 
 .single__save-block {
@@ -29,15 +38,25 @@
     display: flex;
     margin: 1.5rem 0;
     justify-content: space-between;
+    background: #fff;
 }
 
 .single__save--button > i {
     color: #a58989;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.single__save--button > i:hover {
+    color: black;
+    transform: scale(1.2);
+    
 }
 
 .single__rate {
-    /* display: block; */
     text-align: center;
+    font-size: .8rem;
 }
 
 .single__rate--text > span {
@@ -63,13 +82,25 @@
     margin-bottom: 1rem;
     width: 270px;
     border-radius: .6rem;
-    font-size: 1rem;
     font-weight: 600;
+    cursor: pointer;
+    transition: all .3s;
 }
 
 .single__add-to-cart > button.single__add-to-cart--button {
     background-color: rgb(27, 25, 25);
     color: rgb(223, 213, 213);
+}
+
+.single__add-to-cart > button.single__add-to-cart--button:hover {
+    background: #fff;
+    color: #000;
+    /* border: 1px solid; */
+}
+
+.single__add-to-cart > button.single__read-sample:hover {
+    background: #000;
+    color: #fff;
 }
 
 .single__excerpt {
@@ -109,4 +140,57 @@
 
 .single__booklist-block {
     align-self: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+    .single__cover {
+        flex-direction: row-reverse;
+        border: 1px solid;
+        padding: .5rem;
+        border-radius: .5rem;
+        align-items: baseline;
+        gap: 1.5rem;
+        background: #f9dede;
+    }
+
+    .single__cover--img {
+        width: 80px;
+    }
+
+    .single__save-block {
+        margin: 0;
+        width: auto;
+    }
+
+    .single__save-block {
+        gap: 1rem;
+        padding: .3rem .6rem;
+        background: #ffdf00;
+        border-radius: .3rem;
+    }
+
+    .single__add-to-cart {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .single__add-to-cart > button {
+        width: 9rem;
+        height: 1.7rem;
+        border-radius: .3rem;
+    }
+
+    .single__excerpt {
+        width: 400px;
+        padding: 1rem 2rem;
+        height: 200px;
+        overflow-y: auto;
+    }
+
+    .single__book-details {
+        width: 400px;
+    }
 }

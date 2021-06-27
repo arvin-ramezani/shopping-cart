@@ -53,12 +53,14 @@ function SingleBooks(props) {
                     <div className="single__cover--img">
                         <img src={storeBookList.image} alt="Book Image" />
                     </div>
-                    <h2 className="single__name">
-                        { storeBookList.title }
-                    </h2>
-                    <p className="single__writer">
-                        { storeBookList.writer }
-                    </p>
+                    <div className="single__name-block">
+                        <h2 className="single__name">
+                            { storeBookList.title }
+                        </h2>
+                        <p className="single__writer">
+                            { storeBookList.writer }
+                        </p>
+                    </div>
                     <div className="single__save-block">
                         <div className="single__save--button">
                             <i className="fas fa-bookmark"></i>
@@ -82,10 +84,12 @@ function SingleBooks(props) {
                     <button className="single__read-sample" onClick={() => history.push(`/books/${param.id}/excerpt`)}>خواندن گزیده کتاب</button>
                     <Route path={`/books/${param.id}/excerpt`} render={() => <div className="excerpt">downloading excerpt file...</div>} />
                 </div>
-                <div className="single__excerpt">
-                    {storeBookList.description}
+                <div className="single__excerpt content__width">
+                    <p>
+                        {storeBookList.description}
+                    </p>
                 </div>
-                <div className="single__book-details">
+                <div className="single__book-details content__width">
                     <ul>
                         <li>ناشر: <span>لورم ایپسوم</span></li>
                         <li>مترجم: <span>لورم ایپسوم</span></li>
