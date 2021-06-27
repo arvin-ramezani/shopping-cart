@@ -1,0 +1,122 @@
+body {
+    margin-top: 7rem;
+}
+
+header {
+    background: #fcfefe;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+div.header__top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    height: 3rem;
+    box-shadow: 0px 1px 10px #ccc;
+    padding: 1rem;
+
+}
+
+span.header__profile--text,
+span.header__cart--text {
+    display: none;
+}
+
+.header__brand > img {
+    width: 70px;
+    height: auto;
+}
+
+.header__cart--link {
+    align-self: flex-start;
+    padding: 0.2rem .5rem;
+    border-radius: .2rem;
+
+}
+
+.header__cart--link:hover {
+    background: rgba(0, 0, 0, .1);
+    
+}
+
+.header__cart {
+    position: relative;
+
+}
+
+.header__cart > span#cart-count {
+    font-size: .7rem;
+    position: absolute;
+    right: -1rem;
+    top: -8px;
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: .3rem;
+    /* padding-bottom: .2rem; */
+    /* width: 1rem; */
+    /* height: 1rem; */
+    text-align: center;
+
+}
+
+nav.header__navigation {
+    margin-top: 2rem;
+
+}
+
+.header__navigation > ul {
+    display: flex;
+    overflow-y: auto;
+    font-weight: 900;
+    gap: .9rem;
+    height: 2rem;
+}
+
+div.header .header__navigation ul > li > a {
+    position: relative;
+    color: #a2848f;
+    white-space: nowrap;
+    display: inline-flex;
+    padding: 0 .5rem .6rem;
+}
+
+div.header .header__navigation ul > li > a.active {
+    color: black;
+}
+
+div.header .header__navigation ul > li > a.active::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #000;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+@media screen and (min-width: 768px) {
+    
+    span.header__profile--text,
+    span.header__cart--text {
+        display: inline-flex;
+        font-size: .9rem;
+        font-weight: 600;
+        
+    }
+
+    span.header__profile--text {
+        margin-right: 0.4rem;
+    }
+
+    span.header__cart--text {
+        margin-left: 0.4rem;
+    }
+
+}

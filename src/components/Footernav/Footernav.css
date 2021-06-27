@@ -1,0 +1,35 @@
+body {
+    margin-bottom: 6rem;
+}
+
+.footernav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #bcb1a8;
+}
+
+.footernav > div > ul {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    text-align: center;
+    font-size: .7rem;
+
+}
+
+.footernav ul > li > a {
+    color: #464242;
+}
+
+.footernav ul > li > a.active {
+    color: #4a436b;
+}
+
+.footernav ul > li > a > i {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+
+}

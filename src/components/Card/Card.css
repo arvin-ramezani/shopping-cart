@@ -1,0 +1,80 @@
+div.card__body {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #d6b4b4;
+    padding: .8rem .4rem;
+    border-radius: .3rem;
+    font-size: .8rem;
+    gap: .7rem;
+    background: #ffffff;
+    cursor: pointer;
+    direction: ltr;
+    text-align: start;
+    box-shadow: 3px -3px 4px #d6a6a6;
+}
+
+div.card__body.active {
+    box-shadow: 0 0 7px 1px #9a42ff;
+    transform: scale(.95);
+}
+
+div.card__body .card__img {
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+
+div.card__body .card__img > img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+div.card__name {
+    font-weight: 600;
+    margin: 1rem;
+}
+
+div.card__writer {
+    color: #2e5607;
+    margin: .5rem;
+}
+
+.card__rate--text {
+    font-size: small;
+    padding-bottom: .3rem;
+}
+
+div.card__body button {
+    cursor: pointer;
+    font-family: 'Vazir', sans-serif;
+    font-size: .5rem;
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+
+div.card__description {
+    line-height: .9rem;
+    
+
+}
+
+div.card__add-to-cart {
+    margin-top: auto;
+}
+
+.card__add-to-cart > button {
+    outline: none;
+    border: 1px solid #aaa;
+    color: #fff;
+    background-color: #ddd;
+    outline: none;
+    border: 1px solid #310565;
+    color: #fff;
+    background-color: #5a13ad;
+    border-radius: .2rem;
+}

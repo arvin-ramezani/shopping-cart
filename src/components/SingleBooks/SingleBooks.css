@@ -1,0 +1,112 @@
+.single-books--flex-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-books--flex-box:last-child() {
+    margin-bottom: 9rem;
+}
+
+.single__cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single__cover > h2 {
+    margin-top: 1rem;
+    font-size: 1.35rem;
+}
+
+.single__cover > p.single__writer {
+    color: #7b759c;
+    font-weight: 600;
+}
+
+.single__save-block {
+    width: 100%;
+    display: flex;
+    margin: 1.5rem 0;
+    justify-content: space-between;
+}
+
+.single__save--button > i {
+    color: #a58989;
+}
+
+.single__rate {
+    /* display: block; */
+    text-align: center;
+}
+
+.single__rate--text > span {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.single__cover--img {
+    width: 200px;
+}
+
+.single__cover--img > img {
+    width: 100%;
+    height: auto;
+}
+
+.single__add-to-cart > button {
+    display: block;
+    height: 2.5rem;
+    background: transparent;
+    border: 1px solid;
+    outline: none;
+    margin-bottom: 1rem;
+    width: 270px;
+    border-radius: .6rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.single__add-to-cart > button.single__add-to-cart--button {
+    background-color: rgb(27, 25, 25);
+    color: rgb(223, 213, 213);
+}
+
+.single__excerpt {
+    direction: ltr;
+    border: 1px solid;
+    padding: .3rem .5rem;
+    border-radius: .6rem;
+}
+
+.single__book-details {
+    width: 100%;
+    margin: 1rem 0;
+    box-shadow: 0 0 2px 1px #c5a1a1;
+}
+
+.single__book-details > ul {
+    padding: .8rem;
+    background: #ffc3de;
+}
+
+.single__book-details > ul > li {
+    padding: .8rem 0;
+    box-shadow: 0 1px 0px #aaa;
+    position: relative;
+
+}
+
+.single__book-details > ul > li:last-child {
+    box-shadow: none;
+}
+
+.single__book-details > ul > li > span {
+    position: absolute;
+    left: 0;
+    color: #6b6161;
+}
+
+.single__booklist-block {
+    align-self: flex-start;
+}

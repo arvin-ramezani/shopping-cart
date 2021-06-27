@@ -1,0 +1,12 @@
+
+ul.bookList {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+}
+
+ul.bookList > li {
+    padding: .5rem 0;
+    margin: .5rem;
+    
+}

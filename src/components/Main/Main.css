@@ -1,0 +1,51 @@
+.main__banner {
+    /* height: 20rem; */
+    overflow: hidden;
+}
+
+.main__banner > img[alt="banner"] {
+    width: 100%;
+    height: auto;
+}
+
+div.main__suggests {
+    background: #e4e2e2;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    
+}
+
+.main__suggests .main__suggests--title {
+    color: #000;
+    padding: 1rem .3rem;
+    font-weight: 600;
+}
+
+.main__suggests--container {
+    background: #e2dbdb;
+    padding: 2rem .2rem;
+    border-radius: 1rem;
+    box-shadow: inset 1px 2px 4px 1px #654141;
+
+}
+
+ul.main__suggests--list {
+    display: flex;
+    overflow-x: auto;
+    /* background: #e2dbdb;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: inset 1px 2px 4px 1px #654141; */
+}
+
+ul.main__suggests--list > li {
+    padding: .5rem 0;
+    margin: .5rem;
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .main__banner {
+        height: 20rem;
+    }
+}
