@@ -44,6 +44,8 @@ function ShoppingCartItems(props) {
     }
 
     let totalPriceHandler = (id, qty) => {
+        // let integerQty = Number(qty)
+        // console.log(integerQty, qty)
         let totalPrice = 0
         let targetPrice = 0
 

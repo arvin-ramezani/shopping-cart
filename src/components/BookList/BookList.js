@@ -16,9 +16,10 @@ function BookList(props) {
     return (
         <ul className={classes.bookList}>
             {
-                bookList.filter(book => book.id !== props.currentBookId).map((book, index) => {
-                    return <Card book={book} key={index} />
-                })
+                // bookList.filter(book => book.id !== props.currentBookId).map((book, index) => {
+                //     return <Card book={book} key={index} />
+                // })
+                bookList.map((book, index) => book.id === props.currentBookId ? null : <Card book={book} key={index} />)
             }
         </ul>
     )

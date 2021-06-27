@@ -32,17 +32,19 @@ function Main() {
 
 
     let responseHandler = (data) => {
+
+        console.log(data)
         
-      const initialBookList = data.slice(0, 10).map(book => {
+        const initializeBookList = data.slice(0, 10).map(book => {
           return {
               ...book,
               writer: `writer ${writerCounter++}`,
               image: `http://covers.openlibrary.org/b/id/2407${writerCounter}7-S.jpg`,
               price: writerCounter * 10
-          }
-      })
-      dispatch(initialBooks(initialBookList))
-      setLoading(false)
+            }
+        })
+        dispatch(initialBooks(initializeBookList))
+        setLoading(false)
     }
   
     useEffect(() => {

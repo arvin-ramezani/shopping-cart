@@ -24,20 +24,23 @@ function SingleBooks(props) {
     const [currentBook, setCurrentBook] = useState('')
 
     const [showExcerpt, setShowExcerpt] = useState()
+
+    const param = useParams()    
     
-    const bookList = useSelector(state => state.books.bookList)
+    const [storeBookList] = useSelector(state => state.books.bookList.filter(book => book.id === Number(param.id)))
 
     const dispatch = useDispatch();
     
-    const param = useParams()    
 
     const history = useHistory()
 
     
     useEffect(() => {
+        // console.log(param.id, Number(param.id))
+        console.log( storeBookList)
         // let [currentBook] = bookList.filter(book => book.id === Number(param.id));
-        let [ extractCurrentBook ] = bookList.filter(book => book.id === Number(param.id))
-        setCurrentBook(extractCurrentBook)
+        // let [ extractCurrentBook ] = bookList.filter(book => book.id === Number(param.id))
+        // setCurrentBook(extractCurrentBook)
 
         // setSingleBook(currentBook)
     },[])
@@ -48,13 +51,13 @@ function SingleBooks(props) {
             <div className="single-books--flex-box container">
                 <div className="single__cover">
                     <div className="single__cover--img">
-                        {/* <img src={currentBook.image} alt="Book Image" /> */}
+                        <img src={storeBookList.image} alt="Book Image" />
                     </div>
                     <h2 className="single__name">
-                        { currentBook.title }
+                        { storeBookList.title }
                     </h2>
                     <p className="single__writer">
-                        { currentBook.writer }
+                        { storeBookList.writer }
                     </p>
                     <div className="single__save-block">
                         <div className="single__save--button">
@@ -75,21 +78,21 @@ function SingleBooks(props) {
                     </div>
                 </div>
                 <div className="single__add-to-cart">
-                    <button className="single__add-to-cart--button" onClick={() => dispatch(addToCart(currentBook.id))}>افزودن به سبد خرید</button>
+                    <button className="single__add-to-cart--button" onClick={() => dispatch(addToCart(storeBookList.id, storeBookList.price))}>افزودن به سبد خرید</button>
                     <button className="single__read-sample" onClick={() => history.push(`/books/${param.id}/excerpt`)}>خواندن گزیده کتاب</button>
                     <Route path={`/books/${param.id}/excerpt`} render={() => <div className="excerpt">downloading excerpt file...</div>} />
                 </div>
                 <div className="single__excerpt">
-                    {currentBook.description}
+                    {storeBookList.description}
                 </div>
                 <div className="single__book-details">
                     <ul>
                         <li>ناشر: <span>لورم ایپسوم</span></li>
                         <li>مترجم: <span>لورم ایپسوم</span></li>
                         <li>قیمت ارزی: <span>$</span></li>
-                        <li>نویسنده: <span>{currentBook.writer}</span></li>
-                        <li>تاریخ انتشار: <span>{currentBook.publishDate}</span></li>
-                        <li>تعداد صفحات: <span>{currentBook.pageCount}</span></li>
+                        <li>نویسنده: <span>{storeBookList.writer}</span></li>
+                        <li>تاریخ انتشار: <span>{storeBookList.publishDate}</span></li>
+                        <li>تعداد صفحات: <span>{storeBookList.pageCount}</span></li>
                     </ul>
                 </div>
                 <BookList currentBookId={Number(param.id)} />
