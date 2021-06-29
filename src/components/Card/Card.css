@@ -59,9 +59,9 @@ div.card__writer {
 div.card__body button {
     cursor: pointer;
     font-family: 'Vazir', sans-serif;
-    font-size: .5rem;
-    font-weight: 300;
-    letter-spacing: .5px;
+    font-weight: 500;
+    font-size: .6rem;
+    padding: 0 .3rem;
 }
 
 div.card__description {
@@ -84,4 +84,13 @@ div.card__add-to-cart {
     color: #fff;
     background-color: #5a13ad;
     border-radius: .2rem;
+    transition: all .2s;
+}
+
+.card__add-to-cart > button:active {
+    background: #280255;
+}
+
+.card__add-to-cart > button:hover {
+    transform: scale(1.1);
 }

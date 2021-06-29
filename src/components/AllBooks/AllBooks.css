@@ -1,6 +1,7 @@
 .all-books__container {
     max-width: 90%;
     margin: 0 auto;
+    padding-top: 2rem;
 }
 
 .all-books__container > ul {

@@ -7,16 +7,36 @@
     color: rgb(2, 27, 29);
 }
 
+* button {
+    font-family: 'Vazir', sans-serif;
+    cursor: pointer;
+}
+
+body {
+    background: #e4e2e2;
+}
+
 .container {
     max-width: 95%;
     margin: 0 auto;
 }
 
-div.
 
 @media screen and (min-width: 768px) {
     .container {
         max-width: 750px;
 
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1150px;
     }
 }

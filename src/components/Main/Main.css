@@ -29,17 +29,30 @@ div.main__suggests {
 
 }
 
+div.main__suggests--list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+}
+
+div.main__suggests--list > a > abbr {
+    color: darkblue;
+}
+
+div.main__suggests--list > span:last-child {
+    text-decoration: underline;
+    text-underline-offset: .4rem;
+}
+
 ul.main__suggests--list {
     display: flex;
     overflow-x: auto;
-    /* background: #e2dbdb;
-    padding: 2rem 3rem;
-    border-radius: 1rem;
-    box-shadow: inset 1px 2px 4px 1px #654141; */
+    min-height: 2rem;
 }
 
 ul.main__suggests--list > li {
     padding: .5rem 0;
     margin: .5rem;
-    
 }

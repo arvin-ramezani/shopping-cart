@@ -27,15 +27,10 @@ function Card (props) {
 
     const dispatch = useDispatch();
 
+    let addToCartHandler = () => {
 
-    // useEffect(() => {
-
-    //     let book = props.book;
-
-    //     setName(book.title)
-    //     setDescription(book.description.slice(0, 30))
-    //     setWriter(book.writer)
-    // })
+        dispatch(addToCart(book.id, book.price))
+    }
     
 
     return (
@@ -58,7 +53,7 @@ function Card (props) {
                     <i className="fa fa-star"></i>
                 </div>
                 <div className="card__add-to-cart">
-                    <button onClick={() => dispatch(addToCart(book.id, book.price))}>افزودن به سبد خرید</button>
+                    <button onClick={(e) => addToCartHandler(e)}>افزودن به سبد خرید</button>
                 </div>
             </div>
         </li>

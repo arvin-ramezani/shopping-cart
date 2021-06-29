@@ -30,21 +30,6 @@ function App() {
 
   const dispatch = useDispatch();
 
-
-  // let responseHandler = (data) => {
-  //   const bookList = data.slice(0, 10)
-  //   dispatch(initialBooks(bookList))
-    
-  // }
-
-  // useEffect(() => {
-  //   axios.get('https://fakerestapi.azurewebsites.net/api/v1/Books')
-  //   .then(Response => responseHandler(Response.data))
-  //   .catch(err => console.log(err))
-
-  // },[])
-
-
   return (
     <div className="App">
       <Header />

@@ -69,7 +69,11 @@ function Main() {
                         <ul className="main__suggests--list">
                             {
                                 loading 
-                                ? <div className="main__suggests--list">loading...</div>
+                                ? <div className="main__suggests--list">
+                                    <i class="fas fa-spinner fa-pulse"></i>
+                                    <a target="_blank" href="https://fakerestapi.azurewebsites.net/index.html">به علت استفاده از فیلتر شکن، <abbr title="FakeRESTApi.web">API</abbr> با تاخیر زیادی دریافت می شود...</a>
+                                    <span>و حتی بعضی وقت ها 2 دقیقه طول میکشد تا لیست کتاب ها را نمایش دهد </span>
+                                </div>
                                 : bookList.map((book, index) => <Card book={book} key={index} />)
                             }       
                         </ul>

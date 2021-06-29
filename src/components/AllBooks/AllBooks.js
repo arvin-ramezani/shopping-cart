@@ -20,11 +20,12 @@ function AllBooks() {
 
     // console.log(books.img)
 
-    // useEffect(() => {
-    //     axios.get('https://fakerestapi.azurewebsites.net/api/v1/Books')
-    //     .then((Response) => responseHandler(Response.data))
-    //     .catch(err => console.log(err))
-    // },[])
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    },[])
     
     return (
         <div className="all-books__container">

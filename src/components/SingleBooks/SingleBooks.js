@@ -36,14 +36,11 @@ function SingleBooks(props) {
 
     
     useEffect(() => {
-        // console.log(param.id, Number(param.id))
-        console.log( storeBookList)
-        // let [currentBook] = bookList.filter(book => book.id === Number(param.id));
-        // let [ extractCurrentBook ] = bookList.filter(book => book.id === Number(param.id))
-        // setCurrentBook(extractCurrentBook)
-
-        // setSingleBook(currentBook)
-    },[])
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    },[props])
 
 
     return (
